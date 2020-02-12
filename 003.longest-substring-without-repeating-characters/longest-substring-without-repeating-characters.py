@@ -36,3 +36,4 @@ class Solution:
             s1 = s1.split(char)[-1] + char
             lens = len(s1) if len(s1) > lens else lens
         return lens
+
