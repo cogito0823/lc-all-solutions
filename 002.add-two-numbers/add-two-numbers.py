@@ -45,3 +45,20 @@ class Solution(object):
       l2 = l2 and l2.next
       p = p.next
     return dummy.next
+
+######################     方法二    #############################
+
+class Solution:
+    def addTwoNumbers(self, l1: ListNode, l2: ListNode) -> ListNode:
+        def get_num(l):
+            if not l: return 0
+            return l.val + get_num(l.next) * 10
+        def make_list(n):
+            if n == 0: return None
+            l = ListNode(n%10)
+            l.next = make_list(n//10)
+            return l
+        s = get_num(l1) + get_num(l2)
+        if s == 0:
+            return l1
+        return make_list(s)
