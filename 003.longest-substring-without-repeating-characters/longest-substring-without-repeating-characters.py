@@ -1,3 +1,5 @@
+#####################    方法一：66ms    #############################
+
 class Solution(object):
   def _lengthOfLongestSubstring(self, s):
     """
@@ -27,7 +29,8 @@ class Solution(object):
     return ans
 
   
-#########################     方法二      ################################
+#########################     方法二：44ms      ################################
+
 class Solution:
     def lengthOfLongestSubstring(self, s: str) -> int:
         s1 = ''
